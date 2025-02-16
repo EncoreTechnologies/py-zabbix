@@ -199,7 +199,7 @@ class ZabbixAPI(object):
 
         api_version = Version(self.apiinfo.version())
 
-        # 5.4.0 was the first version of Zabbix to change the user param in the login method
+        # 5.4.0 was the first version of Zabbix to change the user param in the login method.
         if api_version and api_version < Version("5.4.0"):
             self.auth = self.user.login(user=user, password=password)
         else:
